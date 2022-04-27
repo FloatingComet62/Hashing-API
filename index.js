@@ -11,7 +11,7 @@ function genkey(){
     return key;
 }
 
-app.listen(PORT);
+app.listen(process.env.PORT);
 app.get('/', (_, response) => {
     response.send("/hash?text&key  (key optional) | /dehash?text&key");
 });
