@@ -1,6 +1,5 @@
 const app = require('express')();
 const crypto = require('cryptr');
-const port = 3000;
 
 function genkey(){
     let key = "";
@@ -12,7 +11,7 @@ function genkey(){
     return key;
 }
 
-app.listen(port, () => console.log(`http://127.0.0.1:${port}`));
+app.listen(PORT);
 app.get('/', (_, response) => {
     response.send("/hash?text&key  (key optional) | /dehash?text&key");
 });
